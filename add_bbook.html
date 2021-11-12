@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset = "utf-8">
+	<title>Insert Borrowed Book Form</title>
+    <style>
+          .button {
+         display: inline-block;
+         border-radius: 3px;
+         background-color:#2699ab;
+         border: none;
+        color: #FFFFFF;
+         text-align: center;
+         font-size: 15px;
+        padding: 15px;
+         width: 200px;
+         transition: all 0.5s;
+         cursor: pointer;
+         margin: 5px;
+        }
+
+        .button span {
+        cursor: pointer;
+        display: inline-block;
+         position: relative;
+         transition: 0.5s;
+            }
+
+        .button span:after {
+         content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+        }
+
+        .button:hover span {
+         padding-right: 10px;
+        }
+
+        .button:hover span:after {
+        opacity: 1;
+        right: 0;
+        }    
+        </style>
+	</head>
+
+	<body>
+		<form action="add_bbook.php" method="post">
+
+		<table border=0>
+			<tr><td>Member Name</td>
+			<td><input type=text name=name maxlength=30 size=30><br></td></tr>
+			<tr><td>Book Name</td>
+			<td><input type=text name=Bname maxlength=30 size=30><br></td></tr>
+			<tr><td>Borrowed date</td>
+			<td><input type=date name=date maxlength=4 size=4><br></td></tr>
+			<tr><td>Is the book returned?</td>
+			<td><input type=text name=status maxlength=20 size=20><br></td></tr>
+		<tr><td><input type=submit value="Update Database"></td></tr>
+		</table>
+	</form>
+    
+     <br>
+     <button class="button" style="vertical-align:middle" onclick="document.location='main_page.html'"><span>CLICK TO RETURN HOME</span></button>
+    </body>
+</html>
